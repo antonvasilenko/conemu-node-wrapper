@@ -5,7 +5,7 @@ class ConemuCommandBuilder {
     this.newConsole = false;
     this.tabName = null;
     this.workDir = null;
-    this.shellName = "{Shells::cmd}";
+    this.shellName = null;
     this.command = `echo hello world`;
   }
 
@@ -43,7 +43,7 @@ class ConemuCommandBuilder {
     let execute = `${this.conemuPath} `;
     execute += this.runMode;
     if (this.inNewConsole) {
-      execute += " new_console";
+      execute += " -new_console";
     }
     if (this.tabName) {
       execute += `:t:"${this.tabName}"`;

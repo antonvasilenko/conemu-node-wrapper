@@ -15,8 +15,6 @@ const path = "c:/tools";
 const builder = new ConemuCommandBuilder("c:/tools/ConEmu/ConEmu64.exe");
 
 const exit = shouldExit => (shouldExit ? shell.paramExit : shell.paramNoExit);
-// const tabName = name => `:t:${name}`;
-// const workDir = dir => `:d:${dir}`;
 
 // let execute = `-runlist ${shell.executable} ${exit(false)} npm -g outdated`;
 // execute = `-run -new_console${tabName("test")} {Shells::bash}`;
@@ -38,16 +36,16 @@ childProcess.exec(command, (error, stdout, stderr) => {
   console.log(stderr);
 });
 
-const getVersion = () =>
-  execFile("node", ["--version"])
-    .then(({ stdout }) => {
-      console.log(stdout);
-      process.exit(0);
-    })
-    .catch(({ stdout, stderr }) => {
-      console.log(stdout);
-      console.error(stderr);
-      process.exit(1);
-    });
+// const getVersion = () =>
+//   execFile("node", ["--version"])
+//     .then(({ stdout }) => {
+//       console.log(stdout);
+//       process.exit(0);
+//     })
+//     .catch(({ stdout, stderr }) => {
+//       console.log(stdout);
+//       console.error(stderr);
+//       process.exit(1);
+//     });
 
-getVersion();
+// getVersion();
