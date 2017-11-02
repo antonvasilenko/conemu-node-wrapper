@@ -1,9 +1,10 @@
-var expect = require("chai").expect;
+const { expect } = require("chai");
+const { ConemuCommandBuilder } = require("./conemu");
 
 describe("ConemuCommandBuilder", () => {
-  describe("build", () => {
-    it("should pass", () => {
-      expect(1).to.be.a("number");
+  describe("ctor", () => {
+    it("should fail without path", () => {
+      expect(() => new ConemuCommandBuilder()).to.throw(Error);
     });
   });
 });

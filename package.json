@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/",
   "scripts": {
-    "test": "mocha src/"
+    "test": "mocha src/",
+    "test:watch": "npm run test -- --watch --check-leaks",
   },
   "author": "",
   "license": "ISC",

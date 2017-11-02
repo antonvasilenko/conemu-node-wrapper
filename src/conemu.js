@@ -1,5 +1,8 @@
 class ConemuCommandBuilder {
   constructor(path) {
+    if (!path) {
+      throw new Error("path to conemu should be specified as first argument");
+    }
     this.conemuPath = `"${path}"`;
     this.runMode = "-run";
     this.newConsole = false;
