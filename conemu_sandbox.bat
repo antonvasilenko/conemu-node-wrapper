@@ -1,0 +1,1 @@
+c:\tools\ConEmu\ConEmu\ConEmuC.exe /AUTOATTACH && cmd /k -cur_console node -v
