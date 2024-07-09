@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "shelljs": "^0.7.8"
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
     "chai": "^4.1.2",
